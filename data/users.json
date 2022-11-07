@@ -1,0 +1,60 @@
+[
+    {
+        "users": [
+            {
+                "id": 1,
+                "name": "John Doe",
+                "email": "johndoe@gmail.com",
+                "phone": "1234567890",
+                "address": {
+                    "street": "123 Main St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zip": "12345"
+                },
+                "company": {
+                    "name": "ABC Company",
+                    "website": "www.abc.com"
+                },
+                "photoUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+                "createdAt": "2019-01-01T00:00:00.000Z"
+            },
+            {
+                "id": 2,
+                "name": "Jane Doe",
+                "email": "king@fisher.com",
+                "phone": "1234567890",
+                "address": {
+                    "street": "123 Main St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zip": "12345"
+                },
+                "company": {
+                    "name": "ABC Company",
+                    "website": "www.abc.com"
+                },
+                "photoUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+                "createdAt": "2019-01-01T00:00:00.000Z"
+            },
+            {
+                "id": 3,
+                "name": "John Doe",
+                "email": "holla@amin.com",
+                "phone": "1234567890",
+                "address": {
+                    "street": "123 Main St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zip": "12345"
+                },
+                "company": {
+                    "name": "ABC Company",
+                    "website": "www.abc.com"
+                },
+                "photoUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+                "createdAt": "2019-01-01T00:00:00.000Z"
+            }
+        ]
+    }
+]
