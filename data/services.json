@@ -1,84 +1,80 @@
 [
     {
-        "services": [
-            {
-                "id": "1",
-                "title": "Service 1",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
-                "price": "100.00",
-                "duration": "1 hour",
-                "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "popularity": {
-                    "count": "10",
-                    "rating": "4.5",
-                    "reviews": "10"
-                }
-            },
-            {
-                "id": "2",
-                "title": "Service 2",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
-                "price": "200.00",
-                "duration": "2 hours",
-                "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "popularity": {
-                    "count": "20",
-                    "rating": "4.5",
-                    "reviews": "20"
-                }
-            },
-            {
-                "id": "3",
-                "title": "Service 3",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
-                "price": "300.00",
-                "duration": "3 hours",
-                "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "popularity": {
-                    "count": "30",
-                    "rating": "4.5",
-                    "reviews": "30"
-                }
-            },
-            {
-                "id": "4",
-                "title": "Service 4",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
-                "price": "400.00",
-                "duration": "4 hours",
-                "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "popularity": {
-                    "count": "40",
-                    "rating": "4.5",
-                    "reviews": "40"
-                }
-            },
-            {
-                "id": "5",
-                "title": "Service 5",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
-                "price": "500.00",
-                "duration": "5 hours",
-                "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "popularity": {
-                    "count": "50",
-                    "rating": "4.5",
-                    "reviews": "50"
-                }
-            },
-            {
-                "id": "6",
-                "title": "Service 6",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
-                "price": "600.00",
-                "duration": "6 hours",
-                "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "popularity": {
-                    "count": "60",
-                    "rating": "4.5",
-                    "reviews": "60"
-                }
-            }
-        ]
+        "id": "1",
+        "title": "Service 1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
+        "price": "100.00",
+        "duration": "1 hour",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "popularity": {
+            "count": "10",
+            "rating": "4.5",
+            "reviews": "10"
+        }
+    },
+    {
+        "id": "2",
+        "title": "Service 2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
+        "price": "200.00",
+        "duration": "2 hours",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "popularity": {
+            "count": "20",
+            "rating": "4.5",
+            "reviews": "20"
+        }
+    },
+    {
+        "id": "3",
+        "title": "Service 3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
+        "price": "300.00",
+        "duration": "3 hours",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "popularity": {
+            "count": "30",
+            "rating": "4.5",
+            "reviews": "30"
+        }
+    },
+    {
+        "id": "4",
+        "title": "Service 4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
+        "price": "400.00",
+        "duration": "4 hours",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "popularity": {
+            "count": "40",
+            "rating": "4.5",
+            "reviews": "40"
+        }
+    },
+    {
+        "id": "5",
+        "title": "Service 5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
+        "price": "500.00",
+        "duration": "5 hours",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "popularity": {
+            "count": "50",
+            "rating": "4.5",
+            "reviews": "50"
+        }
+    },
+    {
+        "id": "6",
+        "title": "Service 6",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem. Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam lorem, vitae aliquam nisl nunc vel lorem.",
+        "price": "600.00",
+        "duration": "6 hours",
+        "img": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        "popularity": {
+            "count": "60",
+            "rating": "4.5",
+            "reviews": "60"
+        }
     }
 ]
