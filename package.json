@@ -1,0 +1,26 @@
+{
+  "name": "b6a11-service-review-server-side-smahaduzzaman",
+  "version": "1.0.0",
+  "description": "This is a server site of services review site created for programming hero assignment 11 by S M Ahaduzzaman.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-smahaduzzaman.git"
+  },
+  "author": "S M Ahaduzzaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-smahaduzzaman/issues"
+  },
+  "homepage": "https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-smahaduzzaman#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0",
+    "nodemon": "^2.0.20"
+  }
+}
