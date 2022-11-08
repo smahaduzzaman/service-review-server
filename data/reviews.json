@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "Review 1",
+        "body": "We've got 100+ building blocks that can help you create almost any type of a website with just a couple of clicks. ",
+        "rating": 5,
+        "user": {
+            "id": 1,
+            "name": "User 1"
+        },
+        "userImg": "https://picsum.photos/200/300"
+    },
+    {
+        "id": 2,
+        "title": "Review 2",
+        "body": "We've got 200+ building blocks that can help you create almost any type of a website with just a couple of clicks. ",
+        "rating": 4,
+        "user": {
+            "id": 2,
+            "name": "User 2"
+        },
+        "userImg": "https://picsum.photos/200/300"
+    }
+]

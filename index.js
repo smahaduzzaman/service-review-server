@@ -9,6 +9,7 @@ app.use(express.json());
 
 const services = require('./data/services.json');
 const users = require('./data/users.json');
+const reviews = require('./data/reviews.json');
 
 app.get('/services', (req, res) => {
     res.send(services);
@@ -16,6 +17,9 @@ app.get('/services', (req, res) => {
 
 app.get('/users', (req, res) => {
     res.send(users);
+})
+app.get('/reviews', (req, res) => {
+    res.send(reviews);
 })
 
 app.get('/', (req, res) => {
