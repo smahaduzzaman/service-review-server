@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
 
@@ -17,10 +18,37 @@ const uri = `mongodb+srv://writerDb:wwXvnIBFavAegLrQ@cluster0.fceds.mongodb.net/
 console.log(uri);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
+// function verifyJWT(req, res, next) {
+//     const authHeader = req.headers['authorization'];
+//     const token = authHeader && authHeader.split(' ')[1];
+//     if (token == null) return res.sendStatus(401);
+
+//     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+//         const authHeader = req.headers.authorization;
+//         if (!authHeader) {
+//             res.status(401).send({ message: 'Unauthorized request' });
+//         }
+//         const token = authHeader.split(' ')[1];
+//         jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+//             if (err) {
+//                 res.status(401).send({ message: 'Unauthorized request' });
+//             }
+//             req.decoded = decoded;
+//             next();
+//         });
+//     })
+// }
+
 async function run() {
     try {
         const serviceCollection = client.db("getYourWriter").collection("services");
         const reviewCollection = client.db("getYourWriter").collection("reviews");
+
+        app.post('/jwt', (req, res) => {
+            const user = req.body;
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+            res.send({ token });
+        })
 
         app.get('/services', async (req, res) => {
             const query = {}
@@ -65,6 +93,12 @@ async function run() {
         })
 
         app.get('/reviews', async (req, res) => {
+            // const decoded = req.decoded;
+            // console.log('review api called', decoded);
+            // if (decoded.email !== req.query.email) {
+            //     res.status(401).send({ message: 'Unauthorized request' });
+            // }
+
             let query = {};
             if (req.query.email) {
                 query = { email: req.query.email }
