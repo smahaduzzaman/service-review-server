@@ -49,14 +49,9 @@ async function run() {
         app.get('/services', async (req, res) => {
             const query = {}
             const cursor = serviceCollection.find(query);
-            const services = await cursor.limit(3).toArray();
+            // const cursor = serviceCollection.find(query).sort({ _id: -1 });
+            const services = await (await cursor.limit(3).toArray());
             res.send(services);
-        });
-        app.get('/allservices', async (req, res) => {
-            const query = {}
-            const cursor = serviceCollection.find(query);
-            const allServices = await cursor.toArray();
-            res.send(allServices);
         });
 
         app.get('/services/:id', async (req, res) => {
@@ -66,11 +61,33 @@ async function run() {
             res.send(service);
         });
 
+        app.get('/allservices', async (req, res) => {
+            const query = {}
+            const cursor = serviceCollection.find(query);
+            const allServices = await cursor.toArray();
+            res.send(allServices);
+        });
+
+        app.post('/addservice', async (req, res) => {
+            const serviceinfo = req.body;
+            const result = await serviceCollection.insertOne(serviceinfo);
+            res.json(result);
+        })
+
         app.post('/reviews', async (req, res) => {
             const review = req.body;
             const result = await reviewCollection.insertOne(review);
-            res.json(result);
+            res.send(result);
         });
+
+        app.get('/reviews', async (req, res) => {
+            const query = {}
+            const cursor = reviewCollection.find(query);
+            const reviews = await cursor.toArray();
+            res.send(reviews);
+        });
+
+        // Update review 
 
         app.patch('/reviews/:id', async (req, res) => {
             const id = req.params.id;
@@ -85,7 +102,7 @@ async function run() {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
             const result = await reviewCollection.deleteOne(query);
-            res.json(result);
+            res.send(result);
         })
 
         app.get('/reviews', async (req, res) => {

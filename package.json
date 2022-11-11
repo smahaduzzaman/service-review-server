@@ -4,7 +4,8 @@
   "description": "This is a server site of services review site created for programming hero assignment 11 by S M Ahaduzzaman.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "build": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.11.0",
     "nodemon": "^2.0.20"
-  }
+  },
+  "devDependencies": {}
 }
