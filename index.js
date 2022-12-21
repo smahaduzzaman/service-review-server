@@ -14,26 +14,26 @@ const uri = `mongodb+srv://writerDb:wwXvnIBFavAegLrQ@cluster0.fceds.mongodb.net/
 console.log(uri);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
-// function verifyJWT(req, res, next) {
-//     const authHeader = req.headers['authorization'];
-//     const token = authHeader && authHeader.split(' ')[1];
-//     if (token == null) return res.sendStatus(401);
+function verifyJWT(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+    if (token == null) return res.sendStatus(401);
 
-//     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-//         const authHeader = req.headers.authorization;
-//         if (!authHeader) {
-//             res.status(401).send({ message: 'Unauthorized request' });
-//         }
-//         const token = authHeader.split(' ')[1];
-//         jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
-//             if (err) {
-//                 res.status(401).send({ message: 'Unauthorized request' });
-//             }
-//             req.decoded = decoded;
-//             next();
-//         });
-//     })
-// }
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        const authHeader = req.headers.authorization;
+        if (!authHeader) {
+            res.status(401).send({ message: 'Unauthorized request' });
+        }
+        const token = authHeader.split(' ')[1];
+        jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+            if (err) {
+                res.status(401).send({ message: 'Unauthorized request' });
+            }
+            req.decoded = decoded;
+            next();
+        });
+    })
+}
 
 async function run() {
     try {
@@ -74,7 +74,7 @@ async function run() {
             res.json(result);
         })
 
-        app.post('/reviews', async (req, res) => {
+        app.post('/reviews', verifyJWT, async (req, res) => {
             const review = req.body;
             const result = await reviewCollection.insertOne(review);
             res.send(result);
